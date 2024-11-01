@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato de Voleibol</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .navbar {
+            background-color: #1e90ff;
+            overflow: hidden;
+            border-radius: 10px;
+            display: flex;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: #0b78d1;
+        }
+        .titulo {
+            font-size: 2.5em;
+            color: #1e90ff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .zona {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #1e90ff;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #1e90ff;
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #e6f7ff;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        tbody tr:hover {
+            background-color: #d1e7ff;
+        }
+        .equipo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#equipos">Equipos</a>
+            <a href="#posiciones">Posiciones</a>
+            <a href="#proximos-encuentros">Próximos encuentros</a>
+        </div>
+    </div>
+    <div class="titulo">Liga sanluiseña voley masculino amateur</div>
+    <div class="zona" id="inicio">
+        <h2>Zona A</h2>
+        <table id="tabla-zona-a">
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>P. G.</th>
+                    <th>P. P.</th>
+                    <th>S. G.</th>
+                    <th>S. P.</th>
+                    <th>Dif.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- El contenido de la tabla se generará dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="zona" id="posiciones">
+        <h2>Zona B</h2>
+        <table id="tabla-zona-b">
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>P. G.</th>
+                    <th>P. P.</th>
+                    <th>S. G.</th>
+                    <th>S. P.</th>
+                    <th>Dif.</th>                     
+                </tr>
+            </thead>
+            <tbody>
+                <!-- El contenido de la tabla se generará dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const equiposZonaA = [
+                { nombre: 'San Francisco', ganados: 20, perdidos: 1, sg: 3, sp: 0, dif: 3 },
+                { nombre: 'D. Esperanza', ganados: 20, perdidos: 1, sg: 5, sp: 4, dif: 10 },
+                { nombre: 'La Merced C', ganados: 10, perdidos: 2, sg: 6, sp: 5, dif: 1 },
+                { nombre: 'S. Española Maxi', ganados: 2, perdidos: 1, sg: 3, sp: 3, dif: 0 },
+                { nombre: 'La Merced A', ganados: 2, perdidos: 2, sg: 7, sp: 10, dif: -3 }
+            ];
+
+            const equiposZonaB = [
+                { nombre: 'Los Pumas', ganados: 3, perdidos: 1, sg: 8, sp: 2, dif: 6 },
+                { nombre: 'Tigres FC', ganados: 2, perdidos: 2, sg: 5, sp: 5, dif: 0 },
+                { nombre: 'Leones Negros', ganados: 4, perdidos: 1, sg: 9, sp: 4, dif: 5 },
+                { nombre: 'Águilas Doradas', ganados: 1, perdidos: 3, sg: 3, sp: 6, dif: -3 },
+                { nombre: 'Jaguares', ganados: 2, perdidos: 2, sg: 6, sp: 6, dif: 0 }
+            ];
+
+            const ordenarEquipos = (equipos) => {
+                return equipos.sort((a, b) => {
+                    if (a.ganados === b.ganados) {
+                        return b.dif - a.dif;
+                    }
+                    return b.ganados - a.ganados;
+                });
+            };
+
+            const generarTabla = (equipos, idTabla) => {
+                const tbody = document.querySelector(`#${idTabla} tbody`);
+                equipos.forEach(equipo => {
+                    const fila = document.createElement('tr');
+                    fila.innerHTML = `
+                        <td class="equipo">${equipo.nombre}</td>
+                        <td>${equipo.ganados}</td>
+                        <td>${equipo.perdidos}</td>
+                        <td>${equipo.sg}</td>
+                        <td>${equipo.sp}</td>
+                        <td>${equipo.dif}</td>
+                    `;
+                    tbody.appendChild(fila);
+                });
+            };
+            generarTabla(ordenarEquipos(equiposZonaA), 'tabla-zona-a');
+            generarTabla(ordenarEquipos(equiposZonaB), 'tabla-zona-b');
+        });
+    </script>
+</body>
+</html>

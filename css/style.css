@@ -1,0 +1,141 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisClaro: #dfe9f3;
+
+    --fuente-principal: 3.8rem; 
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10px */
+}
+
+*, *:before, *after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/** Globales **/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+
+tr, th {
+    padding: 1rem;
+    text-align: center;    
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    
+}
+
+.tabla {
+    margin: auto;    
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+      
+}
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem; /*redondear borde del boton*/
+    width: 90%;
+    text-align: center;
+    border: none;
+    
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+.boton:hover {
+    cursor: pointer /*Coloca la manito en los botones de enlaces*/
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    background-color: var(--fuente-principal);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.titulo {
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+
+/** Navegacion **/
+
+.nav-bg {
+    background-color: var(--secundario);
+    margin-bottom: 1rem;
+}
+
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none; /*le saca la linea de enlace debajo de las letras*/
+    font-size: 2rem;
+    font-weight: 700; /*Poner mas negrita las letras*/
+    padding: 1rem; /*Grosor de la barra de navegacion*/
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
