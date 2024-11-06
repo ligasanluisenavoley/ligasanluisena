@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="titulo">Liga sanluiseña voley masculino amateur</div>
+    <div class="titulo">Liga Sanluiseña Voley Masculino Amateur</div>
 
     <div class="navbar-container">
         <div class="navbar">
@@ -22,13 +22,14 @@
     </div>
 
     <div class="zona" id="inicio">
-        <h2>Zona A</h2>
+        <h2>Tabla de posiciones - Zona A</h2>
         <table id="tabla-zona-a">
             <thead>
                 <tr>
                     <th>Equipo</th>
                     <th>P. J.</th>
                     <th>P. G.</th>
+                    <th>P. P.</th>
                     <th>S. G.</th>
                     <th>S. P.</th>
                     <th>Dif.</th>
@@ -41,13 +42,14 @@
     </div>
 
     <div class="zona" id="posiciones">
-        <h2>Zona B</h2>
+        <h2>Tabla de Posiciones - Zona B</h2>
         <table id="tabla-zona-b">
             <thead>
                 <tr>
                     <th>Equipo</th>
                     <th>P. J.</th>
                     <th>P. G.</th>
+                    <th>P. P.</th>
                     <th>S. G.</th>
                     <th>S. P.</th>
                     <th>Dif.</th>                     
@@ -62,19 +64,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const equiposZonaA = [
-                { nombre: 'San Lorenzo', jugados:4, ganados: 4, sg: 12, sp: 1, dif: 11 },
-                { nombre: 'S. Española', jugados:3, ganados: 1, sg: 4, sp: 7, dif: -3 },
-                { nombre: 'La Merced B', jugados:3, ganados: 1, sg: 5, sp: 9, dif: -4 },
-                { nombre: 'El Lince', jugados:4, ganados: 3, sg: 10, sp: 6, dif: 4 },
-                { nombre: 'Bersekers', jugados:4, ganados: 0, sg: 1, sp: 12, dif: -11 }
+                { nombre: 'San Lorenzo', jugados:5, ganados: 5, perdidos: 0, sg: 15, sp: 3, dif: 12 },
+                { nombre: 'S. Española', jugados:4, ganados: 1, perdidos: 3, sg: 5, sp: 10, dif: -5 },
+                { nombre: 'La Merced B', jugados:4, ganados: 2, perdidos: 2, sg: 8, sp: 7, dif: 1 },
+                { nombre: 'El Lince', jugados:5, ganados: 3, perdidos: 2, sg: 12, sp: 9, dif: 3 },
+                { nombre: 'Bersekers', jugados:4, ganados: 0, perdidos: 4, sg: 1, sp: 12, dif: -11 }
             ];
 
             const equiposZonaB = [
-                { nombre: 'San Francisco', jugados:3, ganados: 2, sg: 8, sp: 3, dif: 5 },
-                { nombre: 'D. Esperanza', jugados:3, ganados: 2, sg: 8, sp: 5, dif: 3 },
-                { nombre: 'La Merced C', jugados:4, ganados: 1, sg: 4, sp: 11, dif: -7 },
-                { nombre: 'S. Española M.', jugados:5, ganados: 2, sg: 7, sp: 8, dif: -1 },
-                { nombre: 'La Merced A', jugados:4, ganados: 2, sg: 7, sp: 8, dif: -1 }
+                { nombre: 'San Francisco', jugados:3, ganados: 2, perdidos: 1, sg: 8, sp: 3, dif: 5 },
+                { nombre: 'D. Esperanza', jugados:4, ganados: 3, perdidos: 1, sg: 11, sp: 7, dif: 4 },
+                { nombre: 'La Merced C', jugados:5, ganados: 2, perdidos: 3, sg: 7, sp: 11, dif: -4 },
+                { nombre: 'S. Española M.', jugados:4, ganados: 2, perdidos: 2, sg: 8, sp: 7, dif: 1 },
+                { nombre: 'La Merced A', jugados:5, ganados: 2, perdidos: 3, sg: 9, sp: 13, dif: -4 }
             ];
 
             const ordenarEquipos = (equipos) => {
@@ -94,6 +96,7 @@
                         <td class="equipo">${equipo.nombre}</td>
                         <td>${equipo.jugados}</td>
                         <td>${equipo.ganados}</td>
+                        <td>${equipo.perdidos}</td>
                         <td>${equipo.sg}</td>
                         <td>${equipo.sp}</td>
                         <td>${equipo.dif}</td>
