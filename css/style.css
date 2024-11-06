@@ -74,3 +74,18 @@ tbody tr:hover {
 .equipo {
     font-weight: bold;
 }
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
+    background-color: var(--fuente-principal);
+    padding: 2rem;
+    border-radius: 1rem;
+}
