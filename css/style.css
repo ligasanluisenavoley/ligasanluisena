@@ -6,7 +6,6 @@ html {
     box-sizing: inherit;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
     font-size: 1.5rem;
@@ -15,11 +14,34 @@ body {
     margin: 0;
     padding: 20px;
 }
-.navbar-container {
-    /* display: flex; */
-    justify-content: center;
-    margin-bottom: 20px;
+
+img {
+    width: 10%;    
+    border-radius: 50%;
+    align-items: center;
+    margin: auto;
 }
+
+
+.titulo {
+    font-size: 3.5rem;
+    color: #1e90ff;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/** Navegacion **/
+
+.navbar-container {
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
 .navbar {
     background-color: #0097a7;
     overflow: hidden;
@@ -27,49 +49,80 @@ body {
     align-items: center;
     border-radius: 10px;
 }
+
 .navbar a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 1rem;
     text-decoration: none;
     font-weight: bold;
 }
+
 .navbar a:hover {
-    background-color: #1e90ff;
+    background-color: #1e90ff
 }
-.titulo {
-    font-size: 2.5em;
-    color: #1e90ff;
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+@media (max-width: 768px) {
+    .nav-responsive {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
 }
-.zona {
-    margin-bottom: 40px;
+
+@media (min-width: 768px) {
+    .nav-responsive {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: 85%;
+    }    
 }
 
 
-h2 {
-    color: #1e90ff;
-    border-bottom: 2px solid #0097a7;
-    padding-bottom: 10px;
+
+/** Escudos **/
+
+.escudos {
+    display: flex;
+    gap: 2rem;
 }
+
+.escudos-contenedor {
+    width: 75%;
+    margin: auto;
+    padding: 2rem;    
+}
+
+@media (min-width: 768px) {
+    .escudos-contenedor {
+        width: auto;
+    }
+}
+
+.escudos-contenedor::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
+
+@media (min-width: 480px) {
+    .escudos-contenedor{
+        width: auto;
+    }
+}
+
+
+/** Tabla de Posiciones **/
 
 table {
     width: 100%;
     max-width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    border-radius: 5px; 
+    margin: 1rem ;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-
-
 th, td {
     border: 1px solid #0097a7;
     padding: 12px;
@@ -88,10 +141,6 @@ tbody tr:nth-child(odd) {
 tbody tr:hover {
     background-color: #d1e7ff;
 }
-.equipo {
-    font-weight: bold;
-}
-
 .sombra {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
@@ -100,72 +149,20 @@ tbody tr:hover {
     padding: 2rem;
     border-radius: 1rem;
 }
-
-
-
-
-@media (max-width: 768px) {
-    .nav-responsive {
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-    }
-    .escudos {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .contenedor {
-        /* max-width: 1rem; */
-        width: 100%;
-        margin: 0 auto;
-    }
+.equipo {
+    font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    .nav-responsive {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        width: 85%;
-    }
-    .contenedor {
-        /* max-width: 1rem; */
-        width: 80%;
-        margin: 0 auto;
-    }
-    
+.zona {
+
 }
 
-img {
-    width: 10%;    
-    border-radius: 50%;
-    align-items: center;
-    margin: 1rem;
-}
+.contenedor {
 
-.escudos {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1rem;
 }
 
 .contenido-tabla {
-    width: 100%;
-    overflow-x: auto; 
+    overflow-x: auto;   
+
 }
 
-.escudos-contenedor {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.escudos-contenedor::-webkit-scrollbar {
-    display: none;  /* Para Chrome, Safari y Opera */
-}
-
-@media (max-width: 768px) {
-    .escudos-contenedor{
-        width: auto;
-    }
-}
