@@ -101,6 +101,9 @@ tbody tr:hover {
     border-radius: 1rem;
 }
 
+
+
+
 @media (max-width: 768px) {
     .nav-responsive {
         margin-left: auto;
@@ -129,6 +132,7 @@ tbody tr:hover {
         width: 80%;
         margin: 0 auto;
     }
+    
 }
 
 img {
@@ -151,10 +155,17 @@ img {
 }
 
 .escudos-contenedor {
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .escudos-contenedor::-webkit-scrollbar {
     display: none;  /* Para Chrome, Safari y Opera */
+}
+
+@media (max-width: 768px) {
+    .escudos-contenedor{
+        width: auto;
+    }
 }
