@@ -147,6 +147,14 @@ img {
 
 .contenido-tabla {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: auto; 
 }
 
+.escudos-contenedor {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.escudos-contenedor::-webkit-scrollbar {
+    display: none;  /* Para Chrome, Safari y Opera */
+}
