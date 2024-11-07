@@ -16,7 +16,7 @@ body {
 }
 
 img {
-    width: 10%;    
+    width: 8%;    
     border-radius: 50%;
     align-items: center;
     margin: auto;
@@ -90,7 +90,7 @@ img {
 }
 
 .escudos-contenedor {
-    width: 75%;
+    width: 100%;
     margin: auto;
     padding: 2rem;    
 }
@@ -116,11 +116,8 @@ img {
 
 table {
     width: 100%;
-    max-width: 100%;
     border-collapse: collapse;
-    margin: 1rem ;
     border-radius: 1rem;
-    overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 th, td {
@@ -153,16 +150,7 @@ tbody tr:hover {
     font-weight: bold;
 }
 
-.zona {
-
-}
-
-.contenedor {
-
-}
-
 .contenido-tabla {
     overflow-x: auto;   
-
 }
 
