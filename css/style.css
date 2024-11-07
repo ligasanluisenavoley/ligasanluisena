@@ -1,6 +1,15 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
 
 body {
     font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
     background-color: #f0f8ff;
     color: #333;
     margin: 0;
@@ -40,7 +49,10 @@ body {
 }
 .zona {
     margin-bottom: 40px;
+
 }
+
+
 h2 {
     color: #1e90ff;
     border-bottom: 2px solid #0097a7;
