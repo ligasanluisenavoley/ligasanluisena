@@ -60,6 +60,7 @@ hr {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    gap: 5rem;
 }
 
 .navbar a {
@@ -170,15 +171,18 @@ tbody tr:hover {
 /** Resultados Fechas Jugadas **/
 .fechas {
     background-color: #0097a7;
-    text-align: center;
+
     border-radius: 10px;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
     text-decoration: none;
     font-weight: bold;
 }
 
+h3 {
+    text-transform: uppercase;
+}
 .img_fechas {
     width: 30%;    
     border-radius: 5%;
