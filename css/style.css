@@ -194,9 +194,9 @@ h3 {
     gap: 3rem;
 }
 
-.margenes, .contenedor, .sombra {
+.margenes {
     margin-bottom: 3rem;
-    max-width: 100rem;
+    width: 120rem;
     margin: auto;
 }
 
