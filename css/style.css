@@ -14,7 +14,7 @@ body {
     margin: 0 auto;
     padding: 10px;
     /* background-image: linear-gradient(to top, #9df9bd 0% , #9df9f0 100%); */
-    background-image: linear-gradient(to top, #cff3f5 0% , #dfeef0 30%);
+    background-image: linear-gradient(to top, #cff3f5 0% , #edf8fa 30%);
 }
 
 /* img {
@@ -184,7 +184,7 @@ h3 {
     text-transform: uppercase;
 }
 .img_fechas {
-    width: 30%;    
+    width: 20%;    
     border-radius: 5%;
 }
 
