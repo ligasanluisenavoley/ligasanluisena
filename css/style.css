@@ -143,6 +143,7 @@ hr {
     width: 85%;
     text-align: center;
     margin: auto;
+    margin-top: 1.5%;
 }
 
 table {
@@ -202,6 +203,7 @@ tbody tr:hover {
     margin-bottom: 3rem;
     width: 100rem;
     margin: auto;
+    margin-top: 1.5rem;
 }
 
 @media (max-width: 768px) {
