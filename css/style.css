@@ -283,17 +283,17 @@ span {
     text-align: left;
 }
 @media (max-width: 768px) {
-    .cards {
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
+    .cards .logo_club {
+        /* margin-left: auto;
+        margin-right: auto; */
+        width: 75%;
     }
 }
 
 @media (min-width: 768px) {
     .cards {
-        margin-left: auto;
-        margin-right: auto;
+        /* margin-left: auto;
+        margin-right: auto; */
         width: 85%;
     }    
 }
