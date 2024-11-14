@@ -242,23 +242,20 @@ span {
     gap: 3rem;
 }
 
-/** Clubes - Imagenes e Informacion**/
-
+/** Tarjetas - Clubes - Imagenes e Informacion**/
 
 .contenedor_club {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
     box-shadow: 0px 5px 15px 0px rgba(125,121,125,1);
-    padding: 2rem;
-    border-radius: 1rem;
-    
+    /* padding: 2rem; */
+    border-radius: 1rem;    
     width: 85%;
     text-align: center;
     margin: auto;
     border-radius: 1rem;
+    margin-bottom: 2rem;
 }
-
-
  .cards {
     display: flex;
     text-align: center;
@@ -291,12 +288,47 @@ span {
         width: 65%;
     }
 }
-
 @media (min-width: 768px) {
     .cards {
         /* margin-left: auto;
         margin-right: auto; */
         width: 85%;
     }    
+}
+
+.boton_insta {
+    background-color: #0097a7;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+
+}
+/* .boton_insta {
+    background-color: var(--secundario);
+    color: black;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem; /*redondear borde del boton*/
+    width: 90%;
+    text-align: center;
+    border: none;
+} */
+@media (min-width: 768px) {
+    .boton_insta {
+        width: auto;
+    }
+}
+.boton_insta:hover {
+    cursor: pointer /*Coloca la manito en los botones de enlaces*/
 }
 
