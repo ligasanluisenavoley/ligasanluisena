@@ -57,6 +57,13 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/** Degradar **/
+.degrado {
+    background: linear-gradient(#eff1ff, #000);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+}
 
 
 /** Navegacion **/
