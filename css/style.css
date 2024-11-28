@@ -60,9 +60,11 @@ h2 {
 /** Degradar **/
 .degrado {
     background: linear-gradient(#eff1ff, #000);
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: silver;    
+    text-decoration: line-through;
 }
 
 
