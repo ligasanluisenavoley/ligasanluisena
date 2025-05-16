@@ -6,9 +6,72 @@
     <title>Campeonato de Voleibol</title>
 
     <link rel="icon" href="img/icono_voley.ico" type="image/x.icon">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preaload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+
+
+
+        .contenedor.sombra {
+            background: rgba(255,255,255,0.95);
+            margin: 4rem auto;
+            padding: 4rem;
+        }
+
+        .titulo-seccion {
+            font-size: 3rem;
+            color: #1a5f7a;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .titulo-seccion span {
+            background: linear-gradient(45deg, #1a5f7a, #2980b9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(45deg, #1a5f7a, #2980b9);
+            margin: 1rem auto;
+        }
+
+        .tabla-posiciones {
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .tabla-posiciones th {
+            background: linear-gradient(45deg, #1a5f7a, #2980b9);
+            padding: 2rem;
+            font-size: 1.6rem;
+        }
+
+        .tabla-posiciones td {
+            padding: 1.8rem;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            background: linear-gradient(45deg, #1a5f7a, #2980b9);
+            color: white;
+            padding: 3rem;
+            margin-top: 5rem;
+        }
+    </style>
 
 </head>
 <body>
@@ -16,25 +79,25 @@
 
     <div class="navbar-container">
         <div class="navbar nav-responsive contenedor">
-            <a href="index.html">Inicio</a>
-            <a href="equipos.html">Equipos</a>
-            <a href="resultados.html">Resultados</a>
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
+            <a href="equipos.html"><i class="fas fa-users"></i> Equipos</a>
+            <a href="resultados.html"><i class="fas fa-trophy"></i> Resultados</a>
             <!-- <a href="#proxima.html">Proxima Fecha</a> -->
             <!-- <a href="posiciones.html">Posiciones</a> -->
 
         </div>
     </div>
 
-    <div class="escudos-contenedor contenedor">
+    <div class=" contenedor">
         <div class="escudos">    
             
-            <img class="logo_escudo" src="img/escudo_el_lince.jpg" alt="El Lince">
-            <img class="logo_escudo" src="img/escudo_esperanza.jpg" alt="Deportivo Esperanza">
-            <img class="logo_escudo" src="img/escudo_san_francisco.jpg" alt="San Francisco">
-            <img class="logo_escudo" src="img/escudo_la_merced.jpg" alt="La Merced">
-            <img class="logo_escudo" src="img/escudo_san_lorenzo.jpg" alt="San Lorenzo">
-            <img class="logo_escudo" src="img/escudo_sociedad_esp.jpg" alt="Sociedad Española">
-            <img class="logo_escudo" src="img/escudo_berserkers.jpg" alt="Berserkers">
+            <img class="logo_escudo" src ="img/escudo_el_lince.jpg" alt="El Lince">
+            <img class="logo_escudo" src ="img/escudo_esperanza.jpg" alt="Deportivo Esperanza">
+            <img class="logo_escudo" src ="img/escudo_san_francisco.jpg" alt="San Francisco">
+            <img class="logo_escudo" src ="img/escudo_la_merced.jpg" alt="La Merced">
+            <img class="logo_escudo" src ="img/escudo_san_lorenzo.jpg" alt="San Lorenzo">
+            <img class="logo_escudo" src ="img/escudo_sociedad_esp.jpg" alt="Sociedad Española">
+            <img class="logo_escudo" src ="img/escudo_berserkers.jpg" alt="Berserkers">
     
         </div>
     </div>
@@ -58,156 +121,54 @@
 
 
     <main class="contenedor sombra">    
-            <div class="zona" id="inicio">
-                <h2>Tabla de posiciones - Zona A</h2>
-                <div class="contenido-tabla">
-                    <table id="tabla-zona-a">
-                        <thead>
-                            <tr>
-                                <th>Equipo</th>
-                                <th>P. J.</th>
-                                <th>P. G.</th>
-                                <th>P. P.</th>
-                                <th>S. G.</th>
-                                <th>S. P.</th>
-                                <th>Dif.</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- El contenido de la tabla se generará dinámicamente -->
-                        </tbody>
-                    </table>
-                </div>
+        <div class="zona" id="inicio">
+            <h2 class="titulo-seccion"><span>Tabla de posiciones - Zona A</span></h2>
+            <div class="contenido-tabla">
+                <table id="tabla-zona-a" class="tabla-posiciones">
+                    <thead>
+                        <tr>
+                            <th>Equipo</th>
+                            <th>P. J.</th>
+                            <th>P. G.</th>
+                            <th>P. P.</th>
+                            <th>S. G.</th>
+                            <th>S. P.</th>
+                            <th>Dif.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- El contenido de la tabla se generará dinámicamente -->
+                    </tbody>
+                </table>
             </div>
+        </div>
 
-            
-            <div class="zona" id="posiciones">
-                <h2>Tabla de Posiciones - Zona B</h2>
-                <div class="contenido-tabla">
-                    <table id="tabla-zona-b">
-                        <thead>
-                            <tr>
-                                <th>Equipo</th>
-                                <th>P. J.</th>
-                                <th>P. G.</th>
-                                <th>P. P.</th>
-                                <th>S. G.</th>
-                                <th>S. P.</th>
-                                <th>Dif.</th>                     
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- El contenido de la tabla se generará dinámicamente -->
-                        </tbody>
-                    </table>
-                </div>
+        <div class="zona" id="posiciones">
+            <h2 class="titulo-seccion"><span>Tabla de Posiciones - Zona B</span></h2>
+            <div class="contenido-tabla">
+                <table id="tabla-zona-b" class="tabla-posiciones">
+                    <thead>
+                        <tr>
+                            <th>Equipo</th>
+                            <th>P. J.</th>
+                            <th>P. G.</th>
+                            <th>P. P.</th>
+                            <th>S. G.</th>
+                            <th>S. P.</th>
+                            <th>Dif.</th>                     
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- El contenido de la tabla se generará dinámicamente -->
+                    </tbody>
+                </table>
             </div>
+        </div>
 
-            <div class="margenes contenedor sombra">    <!-- Aca empieza la Seccion proxima fecha -->
-
-                <h2 class="fechas contenedor sombra proxim">Partidos de la proxima fecha</h2>
-
-                <div class="proxim degrado">
-                    <p><b><i>Sociedad Española vs Berserkers</i></b></p>
-                </div>
-                <div>
-                    Cancha: La Merced -
-                    Fecha: 05/12/2024 - 
-                    Horario: 22:30hs.
-                </div> 
-
-                <hr>
-
-                <div class="proxim degrado">
-                    <p><b><i>La Merced B vs Sociedad Española </i></b></p>
-                </div>
-                <div>
-                    Cancha: La Merced -
-                    Fecha: 06/12/2024 - 
-                    Horario: 22:30hs.
-                </div> 
-
-                <hr>
-
-                <div class="proxim degrado">
-                    <p><b><i>San Francisco vs La Merced A </i></b></p>
-                </div>
-                <div>
-                    Cancha: San Francisco -
-                    Fecha: 08/12/2024 - 
-                    Horario: 19:30hs.
-                </div>
-        
-                <hr>
-
-                <div class="proxim degrado">
-                    <p><b><i>San Francisco vs La Merced C</i></b></p>
-                </div>
-                <div>
-                    Cancha: San Francisco -
-                    Fecha: 08/12/2024 - 
-                    Horario: 17:30hs.
-                </div>   
-
-                <hr>
-
-  
-
-            </div>        <!-- Aca termina la Seccion proxima fecha -->
-    
-
-        
-            <div class="margenes contenedor sombra">    <!-- Aca empieza la Seccion proxima fecha -->
-
-                <h2 class="fechas contenedor sombra proxim">Partidos fecha anterior</h2>
-
-                <div class="proxim degrado">
-                    <p><b><i>La Merced A vs Sociedad Española Maxi</i></b></p>
-                </div>
-                <div>
-                    Cancha: La Merced -
-                    Fecha: 27/11/2024 - 
-                    Horario: 23:00hs.
-                </div>
-        
-                <hr>
-
-                <div class="proxim degrado">
-                    <p><b><i>San Lorenzo vs Sociedad Española</i></b></p>
-                </div>
-                <div>
-                    Cancha: Sociedad Española -
-                    Fecha: 27/11/2024 - 
-                    Horario: 23:00hs.
-                </div>   
-
-                <hr>
-
-                <div class="proxim degrado">
-                    <p><b><i>Deportivo Esperanza vs La Merced C</i></b></p>                
-                </div>
-                <div>
-                    Cancha: Club Victoria -
-                    Fecha: 29/11/2024 -
-                    Horario: 22:00hs.
-                </div>  
-        
-                <hr>
-        
-                <div class="proxim degrado">
-                    <p><b><i>El Lince vs La Merced B</i></b></p>
-                </div>
-                <div>
-                    Cancha: La Merced -
-                    Fecha: 29/11/2024 - 
-                    Horario: 22:30hs
-                </div>            
-            </div>        <!-- Aca termina la Seccion proxima fecha -->
-    
     </main> 
 
     <footer class="footer">
-        <p>Todos los derechos reservados.</p>
+        <p>Todos los derechos reservados. <i class="far fa-copyright"></i> 2023</p>
     </footer>
 
 
