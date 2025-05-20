@@ -17,6 +17,11 @@ body {
     line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+}
 
 .footer {
     text-align: center;
@@ -44,6 +49,13 @@ h2 {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+}
+
 .degrado {
     background: linear-gradient(45deg, #2c3e50, #3498db);
     -webkit-background-clip: text;
@@ -55,18 +67,29 @@ h2 {
 
 /** Barra de navegación **/
 
-/* .navbar-container {
-    margin-left: 5rem;
-} */
 .contenedor_zonas {
     margin-left: 5rem;
+}
+
+@media (max-width: 768px) {
+    .contenedor_zonas {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .navbar {
     background: linear-gradient(45deg, #1a5f7a, #2980b9);
     padding: 1rem;
     gap: 6rem;
+}
 
+@media (max-width: 768px) {
+    .navbar {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .navbar a {
@@ -79,30 +102,46 @@ h2 {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+    }
+}
+
 /** Escudos **/
 
- .escudos {
+.escudos {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 2rem;
-    justify-content: center;
     align-items: center;
- }
+}
 
- .logo_escudo {
-    width: 70%;
-    margin: 2rem;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+@media (max-width: 768px) {
+    .escudos {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 1rem;
+    }
 }
 
 .logo_escudo {
-    width: auto%;
+    width: 70%;
+    margin: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     border-radius: 50%;
     display: block;
     margin: 1.5rem auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-} 
+}
+
+@media (max-width: 768px) {
+    .logo_escudo {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
 
 .logo_escudo:hover {
     transform: scale(1.1);
@@ -116,6 +155,12 @@ h2 {
     border-radius: 15px;
     padding: 1rem;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%;
+    }
 }
 
 .proxim {
@@ -132,6 +177,12 @@ h2 {
     padding: 2.5rem;
     border-radius: 15px;
     margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .sombra {
+        padding: 1.5rem;
+    }
 }
 
 .equipo {
@@ -165,8 +216,7 @@ h2 {
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
-
-/** Tabla de  Posiciones **/
+/** Tabla de Posiciones **/
 
 hr {
     width: 85%;
@@ -189,6 +239,13 @@ th, td {
     border: 1px solid #e0e0e0;
     padding: 15px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 1.4rem;
+    }
 }
 
 th {
@@ -220,6 +277,12 @@ tbody tr:hover {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .titulo-seccion {
+        font-size: 2.4rem;
+    }
+}
+
 .titulo-seccion span {
     background: linear-gradient(45deg, #1a5f7a, #2980b9);
     -webkit-background-clip: text;
@@ -249,8 +312,21 @@ tbody tr:hover {
     font-size: 1.6rem;
 }
 
+@media (max-width: 768px) {
+    .tabla-posiciones th {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
 .tabla-posiciones td {
     padding: 1.8rem;
     font-size: 1.5rem;
 }
 
+@media (max-width: 768px) {
+    .tabla-posiciones td {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+}
