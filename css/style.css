@@ -12,7 +12,7 @@ body {
     background-color: #f5f7fa;
     color: #2c3e50;
     margin: 0 auto;
-    padding: 20px;
+    padding: 5px;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     line-height: 1.6;
 }
@@ -43,7 +43,7 @@ h2 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 4.5rem;
-    margin: 4rem 0;
+    margin: 2rem 0;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     text-align: center;
     font-weight: 600;
@@ -126,7 +126,7 @@ h2 {
 }
 
 .logo_escudo {
-    width: 70%;
+    width: 55%;
     margin: 2rem;
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
     border-radius: 50%;
@@ -215,6 +215,46 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
+
+/** Pagina en Mantenimiento **/
+.mantenimiento {
+    text-align: center;
+}
+
+.mantenimiento h2 {
+    font-size: 3rem;
+    color: #1a5f7a;
+}
+
+.mantenimiento p {
+    font-size: 1.8rem;
+    color: #666;
+}
+
+.mantenimiento i {
+
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .mantenimiento h2 {
+        font-size: 2.2rem;
+    }
+    
+    .mantenimiento p {
+        font-size: 1.6rem;
+    }
+}
+
 
 /** Tabla de Posiciones **/
 
